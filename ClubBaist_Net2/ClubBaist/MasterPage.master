@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+	<link href="Content/bootstrap.min.css" rel="stylesheet" />
+	<script src="Scripts/jquery-3.0.0.min.js"></script>
+	<script src="Scripts/bootstrap.min.js"></script>
+	<script src="Scripts/popper.min.js"></script>
+	<link href="Content/ClubBaist.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navigation">
+                <a href="AddPlayerScore.aspx" class="navigation-link">Add Player Score</a>
+                <a href="ApproveStandingTeeTime.aspx"  class="navigation-link">Approve Standing Tee Time</a>
+                <a href="CancelTeeTime.aspx" class="navigation-link">Cancel Tee Time</a>
+                <a href="CreateStandingTeeTime.aspx" class="navigation-link">Create Standing Tee Time</a>
+                <a href="ScheduleTeeTime.aspx" class="navigation-link">Schedule Tee Time</a>
+                <a href="UpdateTeeTime.aspx" class="navigation-link">Update Tee Time</a>
+                <a href="ViewReservations.aspx" class="navigation-link">View Reservations</a>
+                <a href="ViewScores.aspx" class="navigation-link">View Scores</a>
+				<asp:Button ID="LogOut" runat="server" Text="Log Out" OnClick="LogOut_Click" class="navigation-link logout"/>
+            </nav>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

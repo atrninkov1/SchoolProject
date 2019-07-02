@@ -1,0 +1,57 @@
+﻿.loginLabel{	
+	margin-left:15%;
+}
+
+body {
+	background-image: url('Images/download (1).jpeg');
+	background-size: 100% 100%;
+}
+
+.navigation-link {
+	display: inline-block;
+	padding: .5rem 1rem;
+	color: #000000;
+	border: none;
+	background-color: transparent;
+}
+
+.logout {
+	float: right;
+}
+
+.navigation {
+	background-image: url('Images/download.jpeg');
+	background-size: 100% 100%;
+}
+
+.content {
+	margin: auto;
+	width: 50%;
+	border: 3px solid transparent;
+	text-align:center;
+	background-color:white;
+	height: 1000px;
+}
+
+
+.calendar{
+	margin: auto;
+	width: 30%;
+}
+
+.search{
+	float:left;
+	width:50%;
+	border-right: 1px solid black;
+	height: 1000px;
+}
+
+.results{
+	float:right;
+	width:50%;
+}
+
+.row{
+	margin: 1% 2%;
+	border: 1px solid black;
+}
