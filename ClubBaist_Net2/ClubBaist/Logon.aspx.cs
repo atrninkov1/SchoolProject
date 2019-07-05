@@ -17,6 +17,21 @@ public partial class Logon : System.Web.UI.Page
         HttpCookie authCookie = new HttpCookie(FormsAuthentication.FormsCookieName, encryptedTicket);
         authCookie.HttpOnly = true;
         Response.Cookies.Add(authCookie);
-		Response.Redirect(Request.Params["ReturnUrl"]);
+		if (!string.IsNullOrEmpty(Request.Params["ReturnUrl"]))
+		{
+			Response.Redirect(Request.Params["ReturnUrl"]);
+		}
+		else
+		{
+			if (user.Username == null)
+			{
+				Msg.Text = "Invalid username or password";
+			}
+			else
+			{
+				Msg.ForeColor = System.Drawing.Color.Blue;
+				Msg.Text = "Logged in successfully";
+			}
+		}
 	}
 }
